@@ -29,7 +29,12 @@ function Movie(props) {
     e.preventDefault();
     axios
     .delete(`http://localhost:5000/api/movies/${props.match.params.id}`)
-      .then(res => props.history.push("/"))
+      .then(res => {
+        console.log(res);
+        
+        props.history.push("/");
+        
+      })
       .catch(err => console.log(err));
   };
 
