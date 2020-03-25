@@ -39,7 +39,7 @@ function UpdateMovie(props) {
     
       useEffect(() => {
         axios
-          .put(`http://localhost:5000/api/movies/${id}`)
+          .get(`http://localhost:5000/api/movies/${id}`)
           .then(res => setUpdateMovie({ ...res.data, stars: res.data.stars.join(" ,") }))
           .catch(err => console.log(err));
       }, [id]);

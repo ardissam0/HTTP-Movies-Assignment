@@ -2,11 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: #597A99;
 }
 
 .movie-card {
-  background-color: #fff;
+  background-color: white;
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
@@ -14,6 +14,11 @@ body {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  border-radius: 10px;
+  width: 75%;
+  color: #597A99;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .movie-director {
@@ -22,10 +27,9 @@ body {
 }
 
 .saved-list {
-  background-color: #fff;
-  border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  background-color: #25CCC4;
+  border: 3px solid #597A99;
+  border-radius: 10px;
   padding: 1rem;
   cursor: pointer;
   position: relative;
@@ -34,6 +38,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .saved-list h3 {
@@ -44,9 +51,13 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
-  border: 1px solid grey;
+  border: 3px solid #597A99;
   padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: #25CCC4;
+  font-weight: bold;
+  text-decoration: none;
 }
 .save-wrapper {
   position: relative;
@@ -57,21 +68,54 @@ body {
   position: absolute;
   top: 25px;
   right: 25px;
-  border: 1px solid grey;
+  border: 3px solid #17807A;
   padding: 5px 10px;
   background-color: lightseagreen;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 35px;
 }
 .save-button:hover {
-  background-color: green;
+  background-color: #25CCC4;
   color: white;
 }
 
 .home-button {
+  top: 25px;
+  right: 25px;
+  border: 3px solid #17807A;
   padding: 5px 10px;
-  background-color: lightskyblue;
+  background-color: lightseagreen;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.home-button:hover {
+  background-color: #25CCC4;
+  color: white;
 }
 
 .movie-warning {
-  color: red;
+  color: lightseagreen;
   text-align: center;
+}
+
+button {
+  top: 25px;
+  right: 25px;
+  border: 3px solid #17807A;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+  border-radius: 10px;
+  margin-left: 3px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #25CCC4;
+  color: white;
+}
+
+input {
+  width: 250px;
+  margin-left: 3px;
+  margin-top: 3px;
 }

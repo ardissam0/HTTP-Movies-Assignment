@@ -27,17 +27,17 @@ const App = () => {
 
   return (
     <>
-      <SavedList list={savedList} />
+      <SavedList style={{textDecoration: 'none',}} list={savedList} />
 
       <Route exact path="/">
-        <MovieList movies={movieList} />
+        <MovieList style={{textDecoration: 'none',}} movies={movieList} />
       </Route>
 
       <Route path="/movies/:id"
-        render={props => <Movie addToSavedList={addToSavedList} {...props} />} />
+        render={props => <Movie style={{textDecoration: 'none',}} addToSavedList={addToSavedList} {...props} />} />
 
       <Route exact path='/update-movie/:id' 
-      render={props => <UpdateMovie {...props} addToSavedList={addToSavedList} />}
+      render={props => <UpdateMovie style={{textDecoration: 'none',}} {...props} addToSavedList={addToSavedList} />}
       />
     </>
   );

@@ -31,7 +31,7 @@ function Movie(props) {
     .delete(`http://localhost:5000/api/movies/${props.match.params.id}`)
       .then(res => {
         console.log(res);
-        
+
         props.history.push("/");
         
       })
@@ -45,7 +45,7 @@ function Movie(props) {
       <div className='save-button' onClick={saveMovie}>
         Save
       </div>
-      <button onClick={() => props.hisotry.push(`/update-movie/${props.match.params.id}`)
+      <button onClick={() => props.history.push(`/update-movie/${props.match.params.id}`)
       }> Edit </button>
 
       <button onClick={deleteMovie}>Delete</button>
