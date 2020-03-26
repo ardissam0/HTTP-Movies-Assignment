@@ -25,6 +25,8 @@ function Movie(props) {
   if (!movie) {
     return <div>Loading movie information...</div>;
   }
+
+  //added delete request
   const deleteMovie = e => {
     e.preventDefault();
     axios
@@ -38,6 +40,8 @@ function Movie(props) {
       .catch(err => console.log(err));
   };
 
+  //added edit button
+  //added delete button
   return (
     <div className='save-wrapper'>
       <MovieCard movie={movie} />

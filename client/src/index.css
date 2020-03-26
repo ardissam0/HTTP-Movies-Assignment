@@ -15,7 +15,7 @@ body {
   position: relative;
   margin: 1rem auto;
   border-radius: 10px;
-  width: 75%;
+  width: 92%;
   color: #597A99;
   font-weight: bold;
   text-decoration: none;
@@ -27,18 +27,18 @@ body {
 }
 
 .saved-list {
-  background-color: #25CCC4;
+  background-color: white;
   border: 3px solid #597A99;
   border-radius: 10px;
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
-  width: 75%;
+  width: 88%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: #597A99;
   font-weight: bold;
   text-decoration: none;
 }
@@ -54,8 +54,8 @@ body {
   border: 3px solid #597A99;
   padding: 5px;
   border-radius: 10px;
-  color: white;
-  background-color: #25CCC4;
+  color: lightseagreen;
+  background-color: white;
   font-weight: bold;
   text-decoration: none;
 }
@@ -73,7 +73,6 @@ body {
   background-color: lightseagreen;
   border-radius: 10px;
   font-weight: bold;
-  margin-right: 35px;
 }
 .save-button:hover {
   background-color: #25CCC4;

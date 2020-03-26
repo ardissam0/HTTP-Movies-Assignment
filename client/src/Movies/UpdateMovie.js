@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+//created edit/updateMovie component
 function UpdateMovie(props) {
     console.log("Update", props);
     let id = props.match.params.id;
@@ -26,6 +27,7 @@ function UpdateMovie(props) {
         setStarState(true);
       };
 
+      //put request to edit
       const handleSubmit = e => {
         e.preventDefault();
         axios
@@ -37,13 +39,15 @@ function UpdateMovie(props) {
           .catch(err => console.log(err));
       };
     
+      //get request to display stars
+
       useEffect(() => {
         axios
           .get(`http://localhost:5000/api/movies/${id}`)
           .then(res => setUpdateMovie({ ...res.data, stars: res.data.stars.join(" ,") }))
           .catch(err => console.log(err));
       }, [id]);
-
+//created form and save button
       return (
         <form onSubmit={starState ? handleSubmit : handleStar}>
         <input

@@ -25,6 +25,8 @@ const App = () => {
     getMovieList();
   }, []);
 
+  //added route for updatemovie
+  //changed move to take props
   return (
     <>
       <SavedList style={{textDecoration: 'none',}} list={savedList} />
