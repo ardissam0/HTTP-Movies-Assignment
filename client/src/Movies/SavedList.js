@@ -17,7 +17,7 @@ function SavedList({ list }) {
         );
       })}
       <div className="home-button">
-        <Link style={{textDecoration: "none", color: "black",}} to="/">Home</Link>
+        <Link style={{textDecoration: "none"}} to="/">Home</Link>
       </div>
     </div>
   );
