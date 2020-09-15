@@ -4,6 +4,7 @@ import SavedList from "./Movies/SavedList";
 import MovieList from "./Movies/MovieList";
 import Movie from "./Movies/Movie";
 import axios from 'axios';
+import UpdateMovie from './Movies/UpdateMovie';
 
 const App = () => {
   const [savedList, setSavedList] = useState([]);
@@ -24,17 +25,22 @@ const App = () => {
     getMovieList();
   }, []);
 
+  //added route for updatemovie
+  //changed move to take props
   return (
     <>
-      <SavedList list={savedList} />
+      <SavedList style={{textDecoration: 'none',}} list={savedList} />
 
       <Route exact path="/">
-        <MovieList movies={movieList} />
+        <MovieList style={{textDecoration: 'none',}} movies={movieList} />
       </Route>
 
-      <Route path="/movies/:id">
-        <Movie addToSavedList={addToSavedList} />
-      </Route>
+      <Route path="/movies/:id"
+        render={props => <Movie style={{textDecoration: 'none',}} addToSavedList={addToSavedList} {...props} />} />
+
+      <Route exact path='/update-movie/:id' 
+      render={props => <UpdateMovie style={{textDecoration: 'none',}} {...props} addToSavedList={addToSavedList} />}
+      />
     </>
   );
 };
