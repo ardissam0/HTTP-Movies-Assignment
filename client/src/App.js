@@ -29,7 +29,7 @@ const App = () => {
   //changed move to take props
   return (
     <>
-      <SavedList style={{textDecoration: 'none',}} list={savedList} />
+      <SavedList style={{textDecoration: 'none'}} list={savedList} />
 
       <Route exact path="/">
         <MovieList style={{textDecoration: 'none',}} movies={movieList} />

@@ -2,60 +2,94 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #597A99;
+  background-color: black;
+}
+
+h2 {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .movie-card {
   background-color: white;
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 #fdfcfc, 0 0 2px rgba(247, 244, 244, 1),
+    0 2px 4px rgba(255, 252, 252, 1);
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
   border-radius: 10px;
   width: 92%;
-  color: #597A99;
+  color: black;
   font-weight: bold;
   text-decoration: none;
+}
+
+
+@media(max-width: 900px) {
+  .movie-card {
+    border: 0;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    width: 83%;
+
+  }
 }
 
 .movie-director {
   padding: 4px 0;
   font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.movie-metascore {
+  text-decoration: none;
 }
 
 .saved-list {
   background-color: white;
-  border: 3px solid #597A99;
+  border: 3px solid white;
   border-radius: 10px;
   padding: 1rem;
   cursor: pointer;
   position: relative;
-  margin: 1rem auto;
+  margin: 5%;
   width: 88%;
-  display: flex;
+  display: inline-block;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  color: #597A99;
+  color: black;
   font-weight: bold;
   text-decoration: none;
+  line-height: 35px;;
 }
 
-.saved-list h3 {
-  margin-right: 10px;
+@media(max-width: 900px) {
+  .saved-list {
+    width: 81%;
+  }
 }
 
 .saved-movie {
   margin: 0 10px;
+  color: black;
+}
+
+.saved-movie a {
+  display: flex;
+  flex-direction: column;
+  color: black;
 }
 .saved-active {
-  border: 3px solid #597A99;
   padding: 5px;
   border-radius: 10px;
-  color: lightseagreen;
-  background-color: white;
+  color: white;
   font-weight: bold;
   text-decoration: none;
 }
@@ -64,57 +98,102 @@ body {
   width: 75%;
   margin: 1rem auto;
 }
+
 .save-button {
   position: absolute;
   top: 25px;
-  right: 25px;
-  border: 3px solid #17807A;
+  right: 40px;
+  border: 3px solid black;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: black;
   border-radius: 10px;
   font-weight: bold;
+  color: white;
 }
 .save-button:hover {
-  background-color: #25CCC4;
-  color: white;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+@media(max-width: 900px) {
+  .save-button {
+    top: 25px;
+    right: 20px;
+    padding: 5px 10px;
+  }
+}
+
+.save-btn-edit {
+  width: 6%;
+}
+
+@media(max-width: 900px) {
+  .save-btn-edit {
+    width: 12%;
+  }
+}
+
+@media(max-width: 500px) {
+  .save-btn-edit {
+    width: 17%;
+  }
 }
 
 .home-button {
+  position: absolute;
   top: 25px;
   right: 25px;
-  border: 3px solid #17807A;
+  border: 3px solid black;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: black;
   border-radius: 10px;
   font-weight: bold;
 }
-.home-button:hover {
-  background-color: #25CCC4;
+
+.home-button a{
   color: white;
+}
+.home-button:hover {
+  background-color: white;
+}
+.home-button a:hover {
+  color: black;
 }
 
 .movie-warning {
-  color: lightseagreen;
+  color: red;
   text-align: center;
 }
 
 button {
   top: 25px;
   right: 25px;
-  border: 3px solid #17807A;
+  border: 3px solid white;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: white;
+  color: black;
   border-radius: 10px;
   margin-left: 3px;
   font-weight: bold;
+  cursor: pointer;
 }
 button:hover {
-  background-color: #25CCC4;
+  background-color: black;
   color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 
 input {
   width: 250px;
-  margin-left: 3px;
-  margin-top: 3px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid white;
 }

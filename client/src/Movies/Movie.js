@@ -49,7 +49,7 @@ function Movie(props) {
       <div className='save-button' onClick={saveMovie}>
         Save
       </div>
-      <button onClick={() => props.history.push(`/update-movie/${props.match.params.id}`)
+      <button style={{marginLeft: '25px', marginRight: '10px'}} onClick={() => props.history.push(`/update-movie/${props.match.params.id}`)
       }> Edit </button>
 
       <button onClick={deleteMovie}>Delete</button>

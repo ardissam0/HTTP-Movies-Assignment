@@ -68,7 +68,6 @@ function UpdateMovie(props) {
           value={updateMovie.metascore}
           onChange={handleChange}
         />
-        <p></p>
         Stars:{" "}
         {starState ? (
           updateMovie.stars
@@ -81,7 +80,7 @@ function UpdateMovie(props) {
             onChange={handleChange}
           />
         )}
-        <button type="submit">Save</button>
+        <button className="save-btn-edit" type="submit">Save</button>
       </form>
     );
   }
